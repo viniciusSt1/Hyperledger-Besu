@@ -2,6 +2,7 @@ networkFiles/
 *.tar.gz 
 besu-*/
 jdk-*/
+jdk/
 *.jfr
 docker-compose.yml
 Permissioned-Network/

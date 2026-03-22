@@ -6,24 +6,32 @@ Este guia descreve a configuração de uma rede permissionada utilizando o mecan
 ## Pré-requisitos
 Certifique-se de ter as seguintes ferramentas instaladas:
 
+- Git
 - Java
-- Besu v25.10.0
+- Besu v26.2.0
 - curl, wget, tar
 - Docker
 - Docker-Compose
+
+### Clone repositório
+
+``` 
+git clone https://github.com/viniciusSt1/Hyperledger-Besu
+cd Hyperledger-Besu
+``` 
 
 ### Instalação das Dependências
 
 #### Besu
 
 > [!IMPORTANT]
-> <sup>Estamos utilizando a versão 25.10.0 do Besu. Para utilizar outra versão, altere a URL de download e atualize as variáveis de ambiente conforme necessário.</sup>
+> <sup>Estamos utilizando a versão 26.2.0 do Besu. Para utilizar outra versão, altere a URL de download e atualize as variáveis de ambiente conforme necessário.</sup>
 
 ``` 
-wget https://github.com/hyperledger/besu/releases/download/25.10.0/besu-25.10.0.tar.gz
-tar -xvf besu-25.10.0.tar.gz 
-rm besu-25.10.0.tar.gz 
-export PATH=$(pwd)/besu-25.10.0/bin:$PATH
+wget https://github.com/hyperledger/besu/releases/download/26.2.0/besu-26.2.0.tar.gz
+tar -xvf besu-26.2.0.tar.gz 
+rm besu-26.2.0.tar.gz 
+export PATH=$(pwd)/besu-26.2.0/bin:$PATH
 ```
 
 #### JAVA
@@ -35,7 +43,8 @@ export PATH=$(pwd)/besu-25.10.0/bin:$PATH
 wget https://download.oracle.com/java/21/latest/jdk-21_linux-x64_bin.tar.gz 
 tar -xvf jdk-21_linux-x64_bin.tar.gz
 rm jdk-21_linux-x64_bin.tar.gz
-export JAVA_HOME=$(pwd)/jdk-21.0.9
+mv ./jdk-21.* jdk
+export JAVA_HOME=$(pwd)/jdk
 ```
 
 > [!NOTE]
@@ -126,7 +135,7 @@ Permissioned-Network/
 Crie a imagem Docker personalizada do Besu:
 
 ```
-docker build --no-cache -f Dockerfile -t besu-image-local:25.10.0 .
+docker build --no-cache -f Dockerfile -t besu-image-local:26.2.0 .
 ```
 
 ### 2. Crie o arquivo docker-compose.yml

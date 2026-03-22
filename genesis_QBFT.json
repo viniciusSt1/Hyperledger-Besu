@@ -2,8 +2,7 @@
   "genesis": {
     "config": {
       "chainId": 381660001,
-      "muirglacierblock": 0,
-      "londonBlock": 2592800,
+      "shanghaiTime": 0,
       "zeroBaseFee": true,
       "qbft": {
         "blockperiodseconds": 5,
@@ -38,7 +37,7 @@
   "blockchain": {
     "nodes": {
       "generate": true,
-      "count": 12
+      "count": 6
     }
   }
 }
