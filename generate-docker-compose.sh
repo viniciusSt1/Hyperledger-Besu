@@ -86,6 +86,8 @@ cat <<EOF >> "$COMPOSE_FILE"
       --profile=ENTERPRISE
       --metrics-enabled
       --rpc-http-host=0.0.0.0
+      --metrics-host=0.0.0.0
+      --rpc-ws-host=0.0.0.0
       --rpc-http-api=WEB3,ETH,NET,TRACE,DEBUG,ADMIN,TXPOOL,PERM,QBFT
       --rpc-ws-api=WEB3,ETH,NET,TRACE,DEBUG,ADMIN,TXPOOL,PERM,QBFT
       --data-storage-format=BONSAI
